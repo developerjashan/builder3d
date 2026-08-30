@@ -116,7 +116,7 @@ export default function Products() {
 
           <div className="viewport-corners">
             <ImagePlaceholder
-              label="ADD HERO / LIFESTYLE IMAGE"
+              
               path="/images/products-hero.jpg"
               ratio="aspect-[4/3]"
               dark
