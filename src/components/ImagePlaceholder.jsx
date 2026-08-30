@@ -26,8 +26,11 @@ export default function ImagePlaceholder({
           : 'border-black/10 bg-black/[0.03]'
       } ${className}`}
     >
-      {/* REPLACE WITH: <img src={path} alt="..." className="h-full w-full object-cover" /> */}
-      <div className="bp-grid-dark absolute inset-0 opacity-60" />
+      <img
+  src={path}
+  alt={label}
+  className="absolute inset-0 h-full w-full object-cover"
+/>
       <div className="relative flex flex-col items-center gap-2 px-4 text-center">
         <svg
           width="28"
