@@ -31,7 +31,7 @@ export default function ImagePlaceholder({
   alt={label}
   className="absolute inset-0 h-full w-full object-cover"
 />
-      <div className="relative flex flex-col items-center gap-2 px-4 text-center">
+     
         <svg
           width="28"
           height="28"
