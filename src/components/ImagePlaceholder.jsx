@@ -31,26 +31,7 @@ export default function ImagePlaceholder({
   alt={label}
   className="absolute inset-0 h-full w-full object-cover"
 />
-     
-        <svg
-          width="28"
-          height="28"
-          viewBox="0 0 24 24"
-          fill="none"
-          className={dark ? 'text-steel/50' : 'text-black/25'}
-        >
-          <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" strokeWidth="1.5" />
-          <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" strokeWidth="1.5" />
-          <path d="M21 15l-5-5-9 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-        <span
-          className={`font-mono text-[10px] font-medium uppercase tracking-[0.15em] ${
-            dark ? 'text-steel/60' : 'text-black/40'
-          }`}
-        >
-          {label}
-        </span>
-        <span className="font-mono text-[9px] text-black/25">{path}</span>
+
       </div>
     </div>
   )
