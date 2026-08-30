@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cream text-black font-body antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+  ::selection {
+    @apply bg-orange text-white;
+  }
+  :focus-visible {
+    outline: 2px solid #FF6A00;
+    outline-offset: 3px;
+  }
+}
+
+@layer utilities {
+  /* Blueprint grid texture — subtle, engineering-drawing feel */
+  .bp-grid {
+    background-image: linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .bp-grid-dark {
+    background-image: linear-gradient(to right, rgba(11,11,13,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(11,11,13,0.05) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+
+  /* Signature element: CAD-viewport corner brackets */
+  .viewport-corners {
+    position: relative;
+  }
+  .viewport-corners::before,
+  .viewport-corners::after,
+  .viewport-corners > .corner-tl,
+  .viewport-corners > .corner-br {
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    z-index: 10;
+    pointer-events: none;
+    transition: width 0.25s ease, height 0.25s ease;
+  }
+  .viewport-corners::before {
+    top: -1px;
+    left: -1px;
+    border-top: 2px solid #FF6A00;
+    border-left: 2px solid #FF6A00;
+  }
+  .viewport-corners::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 2px solid #FF6A00;
+    border-right: 2px solid #FF6A00;
+  }
+  .viewport-corners:hover::before,
+  .viewport-corners:hover::after {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Build line — animated underline like a toolpath draw */
+  .build-line {
+    display: block;
+    height: 2px;
+    background: linear-gradient(90deg, #FF6A00, #FF8A3D);
+  }
+
+  .eyebrow {
+    @apply font-mono text-xs tracking-[0.2em] uppercase text-orange;
+  }
+
+  .container-px {
+    @apply px-6 md:px-10 lg:px-16;
+  }
+}
